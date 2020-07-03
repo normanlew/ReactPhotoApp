@@ -7,7 +7,7 @@
 
 ./src/config.js
 
-config
+config.js
 
 # testing
 /coverage
