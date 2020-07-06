@@ -1,14 +1,14 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
+// The navigation buttons search for photos of predetermined topics
 const Nav = () => (
   <header className="main-nav">
-    {/* <span className="icn-logo"><i className="material-icons">code</i></span> */}
     <ul >
       {/* <li><NavLink exact to="/">Home</NavLink></li> */}
-      <li><NavLink to="/cats">Cats</NavLink></li>
-      <li><NavLink to="/dogs">Dogs</NavLink></li>
-      <li><NavLink to="/birds">Birds</NavLink></li>
+      <li><NavLink to="/search/cat">Cats</NavLink></li>
+      <li><NavLink to="/search/dog">Dogs</NavLink></li>
+      <li><NavLink to="/search/bird">Birds</NavLink></li>
     </ul>    
   </header>
 );

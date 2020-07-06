@@ -1,7 +1,9 @@
 // Code for this SearchForm was taken from a tutorial at teamtreehouse.com
+
 import React, { Component } from 'react';
 import { withRouter } from "react-router-dom";
 
+// This form allows the user to search for photos for a given topic
 class SearchForm extends Component {
   
   state = {
@@ -15,7 +17,7 @@ class SearchForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
     this.props.onSearch(this.query.value)
-    this.props.history.push(`/${this.query.value}`);
+    this.props.history.push(`/search/${this.query.value}`);
     e.currentTarget.reset();
   }
   
@@ -27,10 +29,10 @@ class SearchForm extends Component {
                name="search" 
                ref={(input) => this.query = input}
                placeholder="Search..." />
-        <button type="submit" id="submit">Click</button>
+        <button type="submit" id="submit">Submit</button>
       </form>      
     );
   }
 }
 
-export default withRouter (SearchForm)
+export default withRouter (SearchForm);

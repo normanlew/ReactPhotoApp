@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import Photo from './Photo';
 import NotFound from './NotFound'
 
-export default class PhotoList extends Component { 
-
+// Renders photos passed to it via props.  If photos are not found, display the NotFound component.
+class PhotoList extends Component { 
   render () {
     const results = this.props.data;
     let photosExist = (results.length > 0);
@@ -15,14 +15,17 @@ export default class PhotoList extends Component {
     else {
       photos = <NotFound />
     }
-    return(
+    return (
       <div className="photo-container">
         {photosExist && <h2>{this.props.title} photos</h2>}
         <ul>
           {photos}
         </ul> 
       </div>
-      );
+    );
   }
+} 
 
-}
+export default PhotoList;
+
+
