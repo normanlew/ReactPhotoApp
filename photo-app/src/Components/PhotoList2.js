@@ -10,6 +10,7 @@ class PhotoList2 extends Component {
 
   render () {
     let topic = this.props.match.params.topic;
+
     if (topic !== this.props.title) {
         this.props.search(topic);
         return null;
@@ -33,6 +34,7 @@ class PhotoList2 extends Component {
             </ul> 
         </div>
         );
+        
     }
   }
 } 

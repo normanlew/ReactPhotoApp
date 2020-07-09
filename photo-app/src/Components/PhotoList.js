@@ -18,7 +18,7 @@ class PhotoList extends Component {
     return (
       <div className="photo-container">
         {photosExist && <h2>{this.props.title} photos</h2>}
-        <ul>
+        <ul className="photo-container">
           {photos}
         </ul> 
       </div>
